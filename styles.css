@@ -1,37 +1,47 @@
-html, body { /* want to set height and width 100% to make sure they cover the whole viewport */
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    color: beige; /* text color*/
-    box-sizing: border-box;
-}
-
 #background { 
     background-image: linear-gradient(245deg, #c24264, #e8d8dc, #f57953, #f0b34a, #a679f2);
     background-repeat: no-repeat;
     height: 100vh;
     z-index: -1;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
-#projects-container {
-    display: flex;
-    flex-flow: row wrap;
+.flex-container {
+  display: flex;
+  flex-flow: column wrap;
+  background: black;
+  border: 30px solid black;
+  margin: 3px;
+  gap: 1px 1px;
+}
+
+.flex-row {
+    display:flex;
+    background: crimson;
+    flex-wrap: wrap;
+    height: 50vh;
+    flex: 1 1 auto;
+    gap: 1px;
+}
+
+.flex-center {
+    align-items: center;
     justify-content: center;
-    gap: 0.0625em;
-    background-color: black;
-    height: auto;
-    width: 70%;
-    border-radius: 0.5%;
-    border: 25px solid black;
-    margin: auto;
-    margin-top: 3%;
 }
 
-.project {
-    background-color: lightskyblue;
-    height: 150px;
-    width: 150px;
-    border-radius: 3%;
+.flex-item {
+  height: 400px;
+  width: 400px;
+  background: lightskyblue;
+  border: 2px dashed white;
+  border-radius: 5%;
+  flex: 1 1 auto;
 }
 
+.small-nested-flex-item {
+  height: auto;
+  width: 200px;
+  background: black;
+}
